@@ -1,0 +1,82 @@
+<%= content_for :title do %>
+Aliexpress product scrapper
+<% end %>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style type="text/css">
+	@font-face {
+		font-family: titilliumweb;
+		src: url(/titilliumweb.ttf);
+	}
+	#main-cont{
+		width:50%;
+		background-color: white;
+		padding: 25px;
+		border-radius: 10px;
+		margin: 0 auto;
+		display: inline-block;
+
+		-webkit-box-shadow: -3px 3px 22px -9px rgba(0,0,0,0.75);
+		-moz-box-shadow: -3px 3px 22px -9px rgba(0,0,0,0.75);
+		box-shadow: -3px 3px 22px -9px rgba(0,0,0,0.75);
+
+	}
+
+	body{
+		text-align: center;
+		font-family: titilliumweb;
+		background-image: url('/background.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	h1 {
+		font-weight: bold;
+		color: white;
+		padding: 5px;
+
+	</style>
+
+
+	<body>
+
+		<br/>
+
+		<div  id ="main-cont" class="container">
+
+
+			<form>
+				<div class="row">
+					<h2>Title : <%= @title %></h2>
+				</div>		
+				<div class="row">
+					<h2>Price : <%= @price %></h2>
+				</div>		
+				<div class="row">
+				<% if !@availableColors.empty?  %>
+					<h2>Available Colors  : <%= @availableColors %></h2>
+				<% else %>
+				<h2>There is no optional colors</h2>
+				</div>
+				<% end %>
+				<div class="row">
+					<h2>Size  : <%= @size %></h2>
+				</div>
+				<div class="row">
+					<h2>Package size  : <%= @size %></h2>
+				</div>
+				<%= if  !@discount.nil? do %>
+				<div class="row">
+					<h2>hurry up there is a discount !</h2>
+				</div>
+				<% end %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	<form/>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+</body>

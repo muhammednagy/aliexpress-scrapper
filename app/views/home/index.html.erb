@@ -1,0 +1,78 @@
+<%= content_for :title do %>
+Aliexpress product scrapper
+<% end %>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style type="text/css">
+	@font-face {
+		font-family: titilliumweb;
+		src: url(/titilliumweb.ttf);
+	}
+	#main-cont{
+		width:50%;
+		background-color: white;
+		padding: 25px;
+		border-radius: 10px;
+		margin: 0 auto;
+		display: inline-block;
+
+		-webkit-box-shadow: -3px 3px 22px -9px rgba(0,0,0,0.75);
+		-moz-box-shadow: -3px 3px 22px -9px rgba(0,0,0,0.75);
+		box-shadow: -3px 3px 22px -9px rgba(0,0,0,0.75);
+
+	}
+
+	body{
+		text-align: center;
+		font-family: titilliumweb;
+		background-image: url('/background.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#search_btn{
+		background-color:#4CAF50;
+		color: white;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-weight: bold;
+		color: white;
+		padding: 5px;
+
+</style>
+
+
+<body>
+
+	<br/>
+
+	<div  id ="main-cont" class="container">
+
+		<p id="explain">Enter the product url</p>
+
+		<form>
+			<div class="row">
+				<!--<%= label_tag(:q, "Search for:" ) %>-->
+				<div class="col-md-12 col-centered">
+					<%= form_tag(home_search_path(:q), method: "get") do %>
+					<%= text_field_tag(:q,nil,:class=>"form-control",:placeholder=>"Enter product url") %>
+					<br>
+
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-centered">
+								<%= submit_tag("SEARCH",:id => "search_btn", :class=>"btn btn-default") %>
+							</div>
+						</div>
+					</div>
+					<% end %>
+				</div>
+			</div>
+			<form/>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+	</body>
